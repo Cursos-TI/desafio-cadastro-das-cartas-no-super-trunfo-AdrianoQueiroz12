@@ -7,6 +7,7 @@ int main() {
     int populacaoA, populacaoB;
     float areaA, areaB, pibA, pibB;
     int pontosTuristicosA, pontosTuristicosB;
+    float densidadeA, densidadeB, pibPerCapitaA, pibPerCapitaB;
 
     printf("Digite as informações da carta A:\n");
 
@@ -42,6 +43,12 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicosB);
 
+    densidadeA = populacaoA / areaA;
+    pibPerCapitaA = pibA * 1000000000 / populacaoA;  // PIB convertido para reais
+
+    densidadeB = populacaoB / areaB;
+    pibPerCapitaB = pibB * 1000000000 / populacaoB;  // PIB convertido para reais
+
     printf("jogo Super Trunfo de Países \n");
 
     printf("\nCarta A:\n");
@@ -52,6 +59,8 @@ int main() {
     printf("Área: %.2f km²\n", areaA);
     printf("PIB: %.2f bilhões de reais\n", pibA);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicosA);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadeA);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapitaA);
 
     printf("\nCarta B:\n");
     printf("Estado: %s\n", estadoB);
@@ -61,6 +70,8 @@ int main() {
     printf("Área: %.2f km²\n", areaB);
     printf("PIB: %.2f bilhões de reais\n", pibB);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicosB);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadeB);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapitaB);
 
     return 0;
 }
